@@ -1,0 +1,28 @@
+body {
+  font-family: "Montserrat";
+  text-align: center;
+  font-size: 18pt;
+  padding: 0px;
+  margin: 0px auto;
+  display: flex;
+  align-content: flex-end;
+  justify-content: center;
+  flex-flow: nowrap;
+}
+
+
+#artwork {
+  display: none;
+}
+
+#artist {
+  font-weight: 800;
+  margin-right: 1em;
+}
+
+#info {
+  font-weight: 500;
+  display: flex;
+  align-self: flex-end;
+  flex-flow: row nowrap;
+}

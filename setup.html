@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Now Playing: Setup</title>
+    <link rel="stylesheet" href="/stylesheets/master.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+  </head>
+  <body>
+    <div>
+      <p id="title">Now Playing / Current Song</p>
+      <p>Complete each of the fields below and click generate link</p>
+    </div>
+
+    <div>
+      <form id="parameters" action="/" method="post">
+        <p>last.fm username<span class="purple">*</span></p>
+        <input type="text" name="lastfm-username" required placeholder="lastfm username" class="input-box">
+        <br>
+        <p>refresh delay (min: 2000)</p>
+        <input type="number" step="1000" min="2000" name="refresh-delay" placeholder="refresh delay (milliseconds)" class="input-box">
+        <br>
+        <p>style preset<span class="purple">*</span></p>
+        <input type="radio" name="style-preset" value="text_only"> Artist & Track
+        <input type="radio" name="style-preset" value="all_info"> All Info
+        <input type="radio" name="style-preset" value="none" required> None (use for custom css)
+        <br>
+        <input type="submit" name="submit" value="Generate Link" class="button" id="submit">
+      </form>
+      <p style="padding-top:25px;font-size:12pt;"><span class="purple">*</span>=required</p>
+    </div>
+    <div style="visibility:{{is_hidden}}">
+      <p>Add a browser source with this link to display the track you are
+      currently playing:</p>
+      <a href="{{now_playing_link}}">{{now_playing_link}}</a>
+    </div>
+  </body>
+</html>
