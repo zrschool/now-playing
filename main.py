@@ -61,9 +61,9 @@ class SetupPage(webapp2.RequestHandler):
         # Generate a link when button clicked. Element hidden before URL
         # query parameters are filled.
         now_playing_link = ""
-        is_hidden = "is_hidden"
+        is_hidden = "hidden"
         if username != "":
-            now_playing_link = "localhost:8080/now_playing?username=" + str(username) + "&delay=" + str(delay) + "&preset=" + str(preset)
+            now_playing_link = "/now_playing?username=" + str(username) + "&delay=" + str(delay) + "&preset=" + str(preset)
             is_hidden = "visible"
 
         template_vars = {
