@@ -2,6 +2,10 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyc
+
+# Last.fm API key
+lastfm_api_key.py
 
 # C extensions
 *.so
