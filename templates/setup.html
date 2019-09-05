@@ -3,13 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Now Playing: Setup</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/master.css">
     <link rel="stylesheet" href="/stylesheets/main.css">
   </head>
   <body>
     <div>
-      <p id="title">Now Playing / Current Song</p>
-      <p>Complete each of the fields below and click generate link</p>
+      <p id="title">Now Playing Element</p>
+      <p>This site is intended as a tool to help livestreamers display info about the music that they are currenly playing in order to give credit to musicians.</p>
+      <p>Complete each of the fields below and click generate link to get started.</p>
     </div>
 
     <div>
@@ -28,11 +30,13 @@
         <input type="submit" name="submit" value="Generate Link" class="button" id="submit">
       </form>
       <p style="padding-top:25px;font-size:12pt;"><span class="purple">*</span>=required</p>
+      <br>
+      <p style="visibility:{{is_hidden}}">Add a browser source with this link to display the track you are
+        currently playing:</p>
+      <a style="visibility:{{is_hidden}}" href="{{now_playing_link}}">now-playing-element.appspot.com{{now_playing_link}}</a>
     </div>
-    <div style="visibility:{{is_hidden}}">
-      <p>Add a browser source with this link to display the track you are
-      currently playing:</p>
-      <a href="{{now_playing_link}}">{{now_playing_link}}</a>
+    <div>
+      <a href="http://last.fm">This site is powered by AudioScrobbler and makes use of data from the Last.fm API</a>
     </div>
   </body>
 </html>
